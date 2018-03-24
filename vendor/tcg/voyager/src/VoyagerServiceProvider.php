@@ -166,13 +166,13 @@ class VoyagerServiceProvider extends ServiceProvider
                 $this->fixMissingStorageSymlink();
             }
         } elseif ($storage_disk == 'public') {
-            if (!file_exists(public_path('storage')) ||
-               (file_exists(public_path('storage')) && readlink(public_path('storage')) == public_path('storage'))) {
+            if (!file_exists(realpath('storage')) ||
+               (file_exists(realpath('storage')) && realpath(realpath('storage')) == realpath('storage'))) {
                 $alert = (new Alert('missing-storage-symlink', 'warning'))
                     ->title(__('voyager.error.symlink_missing_title'))
                     ->text(__('voyager.error.symlink_missing_text'))
                     ->button(__('voyager.error.symlink_missing_button'), '?fix-missing-storage-symlink=1');
-                VoyagerFacade::addAlert($alert);
+              
             }
         }
     }
@@ -191,7 +191,7 @@ class VoyagerServiceProvider extends ServiceProvider
                 ->text(__('voyager.error.symlink_failed_text'));
         }
 
-        VoyagerFacade::addAlert($alert);
+        
     }
 
     /**
