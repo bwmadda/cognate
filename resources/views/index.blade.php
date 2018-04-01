@@ -149,7 +149,7 @@
 						</div>
 						<!-- /.col-md-8 -->
 						<div class="col-md-12 col-lg-5">
-							<form class="form-inline" action="//themesease.us13.list-manage.com/subscribe/post?u=159f503811a2da9752c412bdb&amp;id=e091890250" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" >
+							<form class="form-inline" action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" >
 
 								<button type="submit" class="btn btn-secondary">GET FREE ASSESSMENT </button>
 							</form>
